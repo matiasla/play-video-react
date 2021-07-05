@@ -251,19 +251,19 @@
       "react/jsx-boolean-value": 0,
       "react/jsx-closing-bracket-location": 2,
       "react/jsx-curly-spacing": [
-        2,
+        4,
         "never"
       ],
       "react/jsx-equals-spacing": [
-        2,
+        4,
         "never"
       ],
       "react/jsx-indent-props": [
-        2,
-        2
+        4,
+        4
       ],
       "react/jsx-no-bind": [
-        2,
+        4,
         {
           "allowArrowFunctions": true
         }
@@ -289,22 +289,22 @@
       "semi-spacing": 0,
       "sort-vars": 0,
       "space-before-blocks": [
-        2,
+        4,
         "always"
       ],
       "space-before-function-paren": [
-        2,
+        4,
         {
           "anonymous": "always",
           "named": "never"
         }
       ],
       "space-in-parens": [
-        2,
+        4,
         "never"
       ],
-      "space-infix-ops": 2,
-      "keyword-spacing": 2,
+      "space-infix-ops": 4,
+      "keyword-spacing": 4,
       "space-unary-ops": [
         2,
         {
