@@ -5,19 +5,13 @@ import Categories from "../components/Categories";
 import Carousel from "../components/Carousel";
 import CaruoselItem from "../components/CarouselItem";
 import Footer from "../components/Footer";
-
+import useInitialState from "../hooks/useInitialState";
 import "../assets/styles/App.scss";
 
+const API = "http://localhost:3000/initalState";
+
 const App = () => {
-
-    const [videos, setVideos] = useState([]);
-
-    useEffect(() => {
-        fetch("http://localhost:3000/initalState")
-            .then(res => res.json())
-            .then(data => setVideos(data))
-            .catch(err => console.log(err));
-    }, []);
+    const initialState = useInitialState(API);
 
     return (
         <div className="app">
