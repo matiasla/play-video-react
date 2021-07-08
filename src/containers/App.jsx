@@ -19,19 +19,24 @@ const App = () => {
             <Search />
 
             {
-                videos.mylist?.length > 0 && (
+                initialState.mylist > 0 && (
                     <Categories title="Mi lista">
                         <Carousel>
-                            <CaruoselItem />
+                            {
+                                initialState.mylist.map(item => {
+                                    <CaruoselItem key={item.id} {...item} />
+                                })
+                            }
                         </Carousel>
                     </Categories>
                 )
+                
             }
 
             <Categories title="Tendencias">
                 <Carousel>
                     {
-                        videos.trends?.map(item => (
+                        initialState.trends?.map(item => (
                             <CaruoselItem key={item.id} {...item} />
                         ))
                     }
@@ -41,7 +46,7 @@ const App = () => {
             <Categories title="Originales de PlayVideo">
                 <Carousel>
                     {
-                        videos.originals?.map(item => (
+                        initialState.originals?.map(item => (
                             <CaruoselItem key={item.id} {...item} />
                         ))
                     }
